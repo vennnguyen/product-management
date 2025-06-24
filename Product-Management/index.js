@@ -1,6 +1,7 @@
 const express = require("express");
+require("dotenv").config(); //load .env
 const route = require("./routes/client/index.route");
-const port = 3000;
+const port = process.env.PORT;
 const app = express();
 //cấu hình pug để chạy
 app.set("views", "./views");
