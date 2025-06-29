@@ -6,7 +6,8 @@ const app = express();
 //cấu hình pug để chạy
 app.set("views", "./views");
 app.set("view engine", "pug");
-
+//cấu hình file tĩnh
+app.use(express.static("public"));
 //route
 route(app);
 app.listen(port, () => {
